@@ -10,7 +10,7 @@
         <el-main>
           <!-- 内容区 -->
           <!-- 下拉框的菜单 -->
-          <DropDownItem :menu="dropdownItem" :cur="curItemIndex"/>
+          <DropDownItem :menu="dropdownItem" :cur="curItemIndex" @mouse-leave="leave"/>
           <!-- 路由 -->
           <router-view />
         </el-main>
@@ -42,8 +42,8 @@ export default {
       // console.log(index)
       this.curItemIndex = index
     },
-    show(){
-      
+    leave(){
+      this.curItemIndex = -1
     }
   }
 }

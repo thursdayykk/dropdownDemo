@@ -1,6 +1,6 @@
 <template>
     <transition name="el-zoom-in-top">
-        <ul v-show="cur != -1">
+        <ul v-show="cur != -1" @mouseleave="leave">
             <li v-for="(item,index) in menu[cur]" :key="index">{{item}}</li>
         </ul>
     </transition>
@@ -21,6 +21,9 @@ export default {
     methods:{
         hover(e){
             console.log(e,111)
+        },
+        leave(){
+            this.$emit('mouse-leave')
         }
     }
 }

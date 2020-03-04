@@ -1,6 +1,6 @@
 <template>
     <div>
-        <span @mouseenter="hover($event,index)" @mouseleave="hover($event,-1)" v-for="(item,index) in data" :key="index">{{item}}</span>
+        <span @mouseenter="hover($event,index)"  v-for="(item,index) in data" :key="index">{{item}}</span>
     </div>
 </template>
 
